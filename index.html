@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Home
           </a>
         </li>
       
@@ -284,7 +284,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-26T17:42:30+08:00">
                 2017-02-26
@@ -341,7 +341,6 @@
 <li>view  视图层</li>
 <li>controller  控制器</li>
 </ul>
-<p><img src="img/Image.png" alt="image"></p>
 <h3 id="MVVM-angular-双向"><a href="#MVVM-angular-双向" class="headerlink" title="MVVM angular  双向"></a>MVVM angular  双向</h3><ul>
 <li>model  数据层</li>
 <li>view   视图层</li>
@@ -350,7 +349,6 @@
 <blockquote>
 <p>将数据挂在viewModel上可以实现数据和模型的双向绑定</p>
 </blockquote>
-<p><img src="img/Image1.png" alt="image"></p>
 <h3 id="下载-angular"><a href="#下载-angular" class="headerlink" title="下载 angular"></a>下载 angular</h3><ul>
 <li>下载node后才会有(官网下载)</li>
 <li>先生成一个package.json 文件夹</li>
@@ -370,7 +368,7 @@
 <li>html标签中添加 </li>
 <li>添加一个根作用域 $rootScope (在chrome浏览器中)</li>
 </ul>
-<p><img src="img/Image2.jpg" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;en&quot; ng-app=&quot;phone&quot;&gt;</div></pre></td></tr></table></figure>
 <h5 id="ng-model"><a href="#ng-model" class="headerlink" title="ng-model"></a>ng-model</h5><ul>
 <li>实现双向数据绑定<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; ng-model=&quot;name&quot;/&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -378,7 +376,6 @@
 <blockquote>
 <p>ng-model 只能放置变量名</p>
 </blockquote>
-<p><img src="img/image3.jpg" alt="image"></p>
 <ul>
 <li>先去当前作用域，上找name,如果有会将name变量的值赋予给输入框</li>
 <li>如果没有,当我们在输入框中输入内容,会在当前作用域下声明合格name变量</li>
@@ -398,15 +395,19 @@
 <h4 id="创建独立作用域"><a href="#创建独立作用域" class="headerlink" title="创建独立作用域"></a>创建独立作用域</h4><ul>
 <li>模块发开发： 单例 / 闭包  -&gt;cmd(seajs) and amd(requirejs)</li>
 </ul>
-<p><img src="img/image4.jpg" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 <h5 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h5><ul>
-<li>给html标签中的 ng-app起名<ul>
-<li>ng-app=”wzpModule” (名字随便)<br><img src="img/image5.jpg" alt="image"></li>
+<li><p>给html标签中的 ng-app起名</p>
+<ul>
+<li>ng-app=”wzpModule” (名字随便)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;en&quot; ng-app=&quot;phone&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>通过console.log(angular)中找到module来调用<br><img src="img/image6.jpg" alt="image"></li>
+<li><p>通过console.log(angular)中找到module来调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var app=angular.module(&apos;phone&apos;,[]);</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h5 id="创建控制器-ng-controller"><a href="#创建控制器-ng-controller" class="headerlink" title="创建控制器 ng-controller"></a>创建控制器 ng-controller</h5><p><img src="img/image7.jpg" alt="image"></p>
+<h5 id="创建控制器-ng-controller"><a href="#创建控制器-ng-controller" class="headerlink" title="创建控制器 ng-controller"></a>创建控制器 ng-controller</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">app.controller(&apos;myIphone&apos;,[&apos;$scope&apos;,&apos;$rootScope&apos;,function ($scope,$rootScope) &#123;</div><div class="line">       $scope.phones=[</div><div class="line">           &#123;product:&apos;Nokia&apos;,type:[&apos;n97&apos;,&apos;n98&apos;]&#125;,</div><div class="line">           &#123;product:&apos;xiaoMi&apos;,type:[&apos;n97&apos;,&apos;n98&apos;]&#125;,</div><div class="line">           &#123;product:&apos;苹果&apos;,type:[&apos;n97&apos;,&apos;n98&apos;]&#125;</div><div class="line">       ]</div><div class="line">   &#125;])</div></pre></td></tr></table></figure>
 <h5 id="控制器特点"><a href="#控制器特点" class="headerlink" title="控制器特点"></a>控制器特点</h5><ul>
 <li>控制器可以嵌套，子能继承父级， 父级不能获取子</li>
 <li>不能操作DOM</li>
@@ -415,7 +416,6 @@
 <li>声明自己模块下的全局属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.run(function($rootScope)&#123;&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="img/image8.jpg" alt="image"></p>
 <h5 id="ng-repeat"><a href="#ng-repeat" class="headerlink" title="ng-repeat"></a>ng-repeat</h5><ul>
 <li>Array<ul>
 <li>谁循环就在谁身上写 ng-repeat</li>
@@ -425,11 +425,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="img/image9.jpg" alt="image"></p>
-<ul>
-<li>Object</li>
-</ul>
-<p><img src="img/image10.jpg" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li ng-repeat=&quot;a in iphone.type track by $index&quot;&gt;</div></pre></td></tr></table></figure>
 
           
         
@@ -507,7 +503,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">articles</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -565,7 +561,7 @@
 </div>
 
 <div class="theme-info">
-  Thème -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
